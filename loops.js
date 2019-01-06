@@ -15,6 +15,10 @@ let main = function(num){
       console.log("Fizz");
       continue;
     }
+    if(i%5 == 0){
+      console.log("Buzz");
+      continue;
+    }
     console.log(i);
   }
 }
