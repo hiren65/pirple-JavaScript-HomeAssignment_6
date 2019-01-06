@@ -8,8 +8,12 @@
 // 3. for numbers multiples of both three and five print "FizzBuzz".
 
 // create function
-let lastNum = 100;
+let lastNum = 101;
 let main = function(num){
+  if (typeof(num) !== "number"){
+    console.log("invalid input other than number");
+    return;
+  }
   for (let i = 1;i<num;i=i+1){
     let findPrime = isPrime(i);
     if(findPrime===true){
@@ -46,4 +50,4 @@ function isPrime(value) {
 //console.log(vv);
 
 // main function execute and check from 1 to 100
-main(101);
+main(lastNum);
