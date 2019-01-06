@@ -11,6 +11,10 @@
 let lastNum = 100;
 let main = function(num){
   for (let i = 1;i<num;i=i+1){
+    if(i%3 == 0 && i%5 == 0){
+      console.log("FizzBuzz");
+      continue;
+    }
     if(i%3 == 0){
       console.log("Fizz");
       continue;
