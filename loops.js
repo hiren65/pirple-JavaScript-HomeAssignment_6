@@ -11,6 +11,10 @@
 let lastNum = 100;
 let main = function(num){
   for (let i = 1;i<num;i=i+1){
+    let findPrime = isPrime(i);
+    if(findPrime===true){
+      console.log("Prime Number :"+i);
+    }
     if(i%3 == 0 && i%5 == 0){
       console.log("FizzBuzz");
       continue;
@@ -26,4 +30,20 @@ let main = function(num){
     console.log(i);
   }
 }
+
+//check for prime number from 1 to 100
+// below function reutns true or false about prime numbers
+function isPrime(value) {
+    for(let ii = 2; ii < value; ii++) {
+        if(value % ii === 0) {
+            return false;
+        }
+    }
+
+    return value > 1;
+}
+//let vv = isPrime(10);
+//console.log(vv);
+
+// main function execute and check from 1 to 100
 main(101);
